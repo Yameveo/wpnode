@@ -1,0 +1,19 @@
+extends layout
+block append head
+  script(type='application/ld+json').
+    {
+      "@context": "http://schema.org",
+      "@type": "NewsArticle",
+      "headline": "Open-source framework for publishing content",
+      "datePublished": "2015-10-07T12:02:41Z",
+      "image": [
+        "logo.jpg"
+      ]
+    }
+block content
+  each post in posts
+    .post
+      h1
+        a(href=post.slug+'.html')= post.title.rendered
+      i.date= post.date_gmt
+      p !{post.content.rendered}

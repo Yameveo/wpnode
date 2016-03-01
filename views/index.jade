@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  each post in posts
+    .post
+      h2
+        a(href=post.slug+'.html')= post.title.rendered
+      i.date= post.date_gmt
+      p !{post.content.rendered}
