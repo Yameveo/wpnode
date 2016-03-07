@@ -15,5 +15,6 @@ block content
     .post
       h1
         a(href=post.slug+'.html')= post.title.rendered
-      i.date= post.date_gmt
+      h3.author= post._embedded.author[0].name
+      i.date= post.date_gmt  
       p !{post.content.rendered}

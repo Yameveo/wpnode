@@ -1,4 +1,4 @@
-To install dependencies run:
+To install dependencies:
 ```
 npm install
 ```
